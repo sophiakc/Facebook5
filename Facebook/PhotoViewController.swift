@@ -10,24 +10,18 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    
+    // Outlets
     @IBOutlet weak var imageView: UIImageView!
     
-    
+    // Variables
     // Prepare for segue from Feed VC
     var image: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        photoImageView.image = image
-
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        imageView.image = image
         imageView.image = image
+
     }
 
     

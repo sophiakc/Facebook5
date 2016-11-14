@@ -9,9 +9,17 @@
 import UIKit
 
 class NewsFeedViewController: UIViewController {
-
+    
+    // Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
+    // Each image are linked here through an dragged outlet
+    @IBOutlet var images: [UIImageView]!
+    
+    // Variables
+    var photoViewController: PhotoViewController!
+    var selectedImageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +27,12 @@ class NewsFeedViewController: UIViewController {
         // Configure the content size of the scroll view
         scrollView.contentSize = CGSize(width: 320, height: feedImageView.image!.size.height)
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // 2.6 Set the image of the PhotoViewController. Guide: Passing Data in Segues
+        for image in images {
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapPhoto))
+            
+            image.addGestureRecognizer(tapRecognizer)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,13 +44,21 @@ class NewsFeedViewController: UIViewController {
         scrollView.scrollIndicatorInsets.bottom = 50
     }
     
+    
+    
     @IBAction func didTapPhoto(_ sender: UITapGestureRecognizer) {
+        selectedImageView = sender.view as! UIImageView
         performSegue(withIdentifier: "segueDetailPhoto", sender: nil)
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let photoViewController = segue.destination as! PhotoViewController
         
-        photoViewController.image = self.feedImageView.image
+        
+        if segue.identifier == "segueDetailPhoto" {
+            photoViewController.image = selectedImageView.image
+        }
     }
 }
