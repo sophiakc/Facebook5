@@ -23,6 +23,7 @@
 		7E88F6641DD9554300983E23 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E88F6611DD9554300983E23 /* BaseTransition.swift */; };
 		7E88F6651DD9554300983E23 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E88F6621DD9554300983E23 /* Common.swift */; };
 		7E88F6661DD9554300983E23 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E88F6631DD9554300983E23 /* FadeTransition.swift */; };
+		7E88F6681DD9A1DA00983E23 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E88F6671DD9A1DA00983E23 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		7E88F6611DD9554300983E23 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		7E88F6621DD9554300983E23 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7E88F6631DD9554300983E23 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		7E88F6671DD9A1DA00983E23 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				429277A3198F391500E19641 /* CreateStatusViewController.swift */,
 				429277A5198F392800E19641 /* CreatePhotoViewController.swift */,
 				429277A7198F393500E19641 /* CreateCheckinViewController.swift */,
+				7E88F6671DD9A1DA00983E23 /* PhotoViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				42167678198ECE0E008CCBC3 /* RequestsViewController.swift in Sources */,
 				7E88F6641DD9554300983E23 /* BaseTransition.swift in Sources */,
 				42167673198EAABC008CCBC3 /* SettingsViewController.swift in Sources */,
+				7E88F6681DD9A1DA00983E23 /* PhotoViewController.swift in Sources */,
 				7E88F6661DD9554300983E23 /* FadeTransition.swift in Sources */,
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
 			);

@@ -18,6 +18,7 @@ class NewsFeedViewController: UIViewController {
 
         // Configure the content size of the scroll view
         scrollView.contentSize = CGSize(width: 320, height: feedImageView.image!.size.height)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,4 +35,13 @@ class NewsFeedViewController: UIViewController {
         scrollView.scrollIndicatorInsets.bottom = 50
     }
     
+    @IBAction func didTapPhoto(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "segueDetailPhoto", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let photoViewController = segue.destination as! PhotoViewController
+        
+        photoViewController.image = self.feedImageView.image
+    }
 }
