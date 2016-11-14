@@ -19,6 +19,7 @@ class NewsFeedViewController: UIViewController {
     // Variables
     var photoViewController: PhotoViewController!
     var selectedImageView: UIImageView!
+    var fadeTransition: FadeTransition!
     
     
     override func viewDidLoad() {
@@ -59,6 +60,11 @@ class NewsFeedViewController: UIViewController {
         
         if segue.identifier == "segueDetailPhoto" {
             photoViewController.image = selectedImageView.image
+            photoViewController.modalPresentationStyle = .custom
+            fadeTransition = FadeTransition()
+            photoViewController.transitioningDelegate = fadeTransition
+            fadeTransition.duration = 1.0
         }
     }
+    
 }
