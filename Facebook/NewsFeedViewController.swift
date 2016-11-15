@@ -21,6 +21,12 @@ class NewsFeedViewController: UIViewController {
     var selectedImageView: UIImageView!
     var fadeTransition: FadeTransition!
     
+    // unpack the FeedViewController for customize modal transition
+//    let tabBarController = fromViewController as! UITabBarController
+//    let navigationController = tabBarController.selectedViewController as! UINavigationController
+//    let newsFeedViewController = navigationController.topViewController as! FeedViewController
+//    let photoViewController = toViewController as! PhotoViewController
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +57,7 @@ class NewsFeedViewController: UIViewController {
         selectedImageView = sender.view as! UIImageView
         performSegue(withIdentifier: "segueDetailPhoto", sender: nil)
     }
+    
     
     
     

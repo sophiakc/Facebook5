@@ -10,6 +10,15 @@ import UIKit
 
 class FadeTransition: BaseTransition {
     
+    // Variables
+    var originalSelectedImageViewFrame: CGRect!
+    var originalPhotoViewFrame: CGRect!
+    
+    
+    let window = UIApplication.shared.keyWindow
+    
+  
+    
     override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
         toViewController.view.alpha = 0
@@ -18,6 +27,28 @@ class FadeTransition: BaseTransition {
         }) { (finished: Bool) -> Void in
             self.finish()
         }
+        
+//        let tabBarController = fromViewController as! UITabBarController
+//        let navigationController = tabBarController.selectedViewController as! UINavigationController
+//        let newsFeedViewController = navigationController.topViewController as! NewsFeedViewController
+//        let photoViewController = toViewController as! PhotoViewController
+//        
+//        let selectedImageView = newsFeedViewController.selectedImageView
+//        let photoView = photoViewController.imageView
+//        
+//        
+//        originalSelectedImageViewFrame = selectedImageView!.frame.offsetBy(dx: 0, dy: 126)
+//        
+//        selectedImageView!.isHidden = true
+        
+        // Creating window
+        
+        
+//        let window = UIApplication.shared.keyWindow
+//        window?.addSubview()
+//        
+        
+        
     }
     
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
@@ -28,5 +59,6 @@ class FadeTransition: BaseTransition {
         }) { (finished: Bool) -> Void in
             self.finish()
         }
+
     }
 }

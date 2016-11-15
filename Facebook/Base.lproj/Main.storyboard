@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_back" id="3oc-Q7-6D1">
-                                <frame key="frameInset" minX="-1" minY="-2" maxX="2" maxY="505"/>
+                                <frame key="frameInset" minX="-2" minY="-2" maxX="2" maxY="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nAB-bO-ZjO">
@@ -380,15 +380,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="6cF-vh-sMA">
-                                <frame key="frameInset" minY="61" width="320" height="480"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" maximumZoomScale="3" id="6cF-vh-sMA">
+                                <frame key="frameInset" minY="61" width="320" height="463"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wedding1" id="vNC-ft-YAD" userLabel="Image View">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="vNC-ft-YAD" userLabel="Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="463"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="doneButton" id="9Jh-m4-Azh">
                                 <frame key="frameInset" minX="242" minY="20" width="68" height="33"/>
@@ -401,7 +403,7 @@
                                     <action selector="didTapDone:" destination="FIt-k1-dyc" eventType="touchUpInside" id="6yJ-9x-Qr0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo_actions" id="Yuk-9b-Zvi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo_actions" id="Yuk-9b-Zvi" userLabel="Actions Button">
                                 <frame key="frameInset" minY="523" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -409,7 +411,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="actionsButton" destination="Yuk-9b-Zvi" id="8XV-Y9-7fi"/>
+                        <outlet property="doneButton" destination="9Jh-m4-Azh" id="vZs-ht-K83"/>
                         <outlet property="imageView" destination="vNC-ft-YAD" id="uTt-Xj-gt8"/>
+                        <outlet property="scrollView" destination="6cF-vh-sMA" id="80w-M1-Sbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCL-LS-JK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,7 +430,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_status" id="3t6-iT-7U1">
-                                <frame key="frameInset"/>
+                                <frame key="frameInset" minX="-1" minY="-3" maxX="2" maxY="3"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZuE-tp-cfr">
