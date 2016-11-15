@@ -16,13 +16,13 @@ Total time spent: **** cumulated hours
 
 * [X] Tapping on a photo in the news feed should expand the photo full screen [Time spent: 4h]
 * [X] Tapping the Done button should animate the photo back into its position in the news feed
-* [ ] On scroll of the full screen photo, the background should start to become transparent, revealing the feed
+* [X] On scroll of the full screen photo, the background should start to become transparent, revealing the feed
 * [ ] If the user scrolls a large amount and releases, the full screen photo should dismiss
 
 
 ## Optional User Stories
 
-* [ ] The full screen photo should be zoomable
+* [X] The full screen photo should be zoomable
 * [ ] The user should be able to page through the other photos in full screen mode
 
 
@@ -35,13 +35,13 @@ Total time spent: **** cumulated hours
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. The temporary image view with the window is still unclear to me
+2. The animation from newsFeedView to photoVC is also something I need to practice again
 
 
 ## Video Walkthrough
 
-![Facebook](Facebook.gif)
+![Facebook](Facebook5.gif)
 
 ## License
 

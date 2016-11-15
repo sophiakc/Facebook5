@@ -20,12 +20,7 @@ class NewsFeedViewController: UIViewController {
     var photoViewController: PhotoViewController!
     var selectedImageView: UIImageView!
     var fadeTransition: FadeTransition!
-    
-    // unpack the FeedViewController for customize modal transition
-//    let tabBarController = fromViewController as! UITabBarController
-//    let navigationController = tabBarController.selectedViewController as! UINavigationController
-//    let newsFeedViewController = navigationController.topViewController as! FeedViewController
-//    let photoViewController = toViewController as! PhotoViewController
+    var tapTransition: TapTransition!
     
     
     override func viewDidLoad() {
@@ -68,9 +63,9 @@ class NewsFeedViewController: UIViewController {
         if segue.identifier == "segueDetailPhoto" {
             photoViewController.image = selectedImageView.image
             photoViewController.modalPresentationStyle = .custom
-            fadeTransition = FadeTransition()
-            photoViewController.transitioningDelegate = fadeTransition
-            fadeTransition.duration = 1.0
+            tapTransition = TapTransition()
+            photoViewController.transitioningDelegate = tapTransition
+            tapTransition.duration = 1.0
         }
     }
     
