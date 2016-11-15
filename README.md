@@ -10,7 +10,7 @@ Purpose: leverage animations and gestures to transition between screens. We're g
 
 Submitted by: [Sophia Kecir Camper](https://github.com/sophiakc)
 
-Total time spent: **** cumulated hours
+Total time spent: **14** cumulated hours
 
 ## Required User Stories
 
