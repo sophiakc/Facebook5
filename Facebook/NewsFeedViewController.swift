@@ -12,7 +12,7 @@ class NewsFeedViewController: UIViewController {
     
     // Outlets
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var feedImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     // Each image are linked here through an dragged outlet
     @IBOutlet var images: [UIImageView]!
     
@@ -27,9 +27,9 @@ class NewsFeedViewController: UIViewController {
         super.viewDidLoad()
 
         // Configure the content size of the scroll view
-        scrollView.contentSize = CGSize(width: 320, height: feedImageView.image!.size.height)
+        scrollView.contentSize = CGSize(width: 320, height: imageView.image!.size.height)
         
-        // 2.6 Set the image of the PhotoViewController. Guide: Passing Data in Segues
+        // 2.6 Set the images of the PhotoViewController. Guide: Passing Data in Segues
         for image in images {
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapPhoto))
             
@@ -65,7 +65,7 @@ class NewsFeedViewController: UIViewController {
             photoViewController.modalPresentationStyle = .custom
             tapTransition = TapTransition()
             photoViewController.transitioningDelegate = tapTransition
-            tapTransition.duration = 1.0
+            tapTransition.duration = 0.3
         }
     }
     

@@ -17,7 +17,7 @@ Total time spent: **14** cumulated hours
 * [X] Tapping on a photo in the news feed should expand the photo full screen [Time spent: 4h]
 * [X] Tapping the Done button should animate the photo back into its position in the news feed
 * [X] On scroll of the full screen photo, the background should start to become transparent, revealing the feed
-* [ ] If the user scrolls a large amount and releases, the full screen photo should dismiss
+* [X] If the user scrolls a large amount and releases, the full screen photo should dismiss
 
 
 ## Optional User Stories
@@ -37,11 +37,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 1. The temporary image view with the window is still unclear to me
 2. The animation from newsFeedView to photoVC is also something I need to practice again
+3. Now, the animation from newsFeedView to photoView works. Not sure about the use of tempView and addSubview, removeFromSuperView
 
 
 ## Video Walkthrough
 
-![Facebook](Facebook5.gif)
+![Facebook](Facebook5-1.gif)
+![Facebook](Facebook5-2.gif)
 
 ## License
 
